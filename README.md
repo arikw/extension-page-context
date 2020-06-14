@@ -25,7 +25,7 @@ This utility facilitates the following -
 
 ### Usage
 
-`runInPageContext` takes a "script function" or a config object like so:
+Include `page-context.js` file in your project and call `runInPageContext()`, passing it a "script function" or a config object like so:
 
 ```javascript
 runInPageContext(scriptFn /* script function to inject */);
