@@ -11,9 +11,9 @@ As stated [on MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebE
 > - Content scripts cannot see JavaScript variables defined by page scripts.
 > - If a page script redefines a built-in DOM property, the content script sees the original version of the property, not the redefined version
 
-**Meaning content scripts run on a different context than the context of page scripts**
+**Meaning content scripts run in a different context than the context of page scripts**
 
-So if, for example, you want to overwrite the `onClick` property of a DOM element in a content script, you will end up with two event handlers - one is the original handler and the second is the handler defined in the content script.
+So if, for example, you'd want to overwrite the `onClick` property of a DOM element in a content script, you will end up with two event handlers - one is the original handler and the second is the handler defined in the content script.
 
 To solve this issue, your script must run as a "page script" by injecting code into a `<script>` element.
 
@@ -21,7 +21,7 @@ To solve this issue, your script must run as a "page script" by injecting code i
 
 This utility facilitates the following -
 - Running code directly in the page's context
-- Getting a value back to the content script
+- Getting the return value back to the content script
 
 ### Usage
 
